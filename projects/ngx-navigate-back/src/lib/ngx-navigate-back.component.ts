@@ -4,9 +4,7 @@ import { Component } from '@angular/core';
   selector: 'lib-ngx-navigate-back',
   imports: [],
   template: `
-    <p>
-      ngx-navigate-back works!
-    </p>
+    <ng-content></ng-content>
   `,
   styles: ``
 })
