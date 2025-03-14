@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { NgxNavigateBackService } from '../../../ngx-navigate-back/src/public-api';
 
 @Component({
@@ -15,7 +15,12 @@ export class AppComponent {
 
   _navigateBackService: NgxNavigateBackService = inject(NgxNavigateBackService)
 
+  constructor(private _router: Router) {}
   back() {
     this._navigateBackService.navigateBack()
+  }
+
+  navigate(page: string) {
+    this._router.navigate([page])
   }
 }
